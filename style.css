@@ -159,8 +159,8 @@ a:after {
 
 
 header{
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -253,6 +253,9 @@ tag-red {
 
     font-family : 'Roboto', Times, serif;
     font-size: 1.2rem;
+
+    float: left;
+    margin-right: 10px;
 }
 
 tag-green {
@@ -263,6 +266,8 @@ tag-green {
 
     font-family : 'Roboto', Times, serif;
     font-size: 1.2rem;
+    float: left;
+    margin-right: 10px;
 }
 
 tag-blue {
@@ -273,6 +278,8 @@ tag-blue {
 
     font-family : 'Roboto', Times, serif;
     font-size: 1.2rem;
+    float: left;
+    margin-right: 10px;
 }
 
 /* ---------------------------------------------- */
