@@ -2,6 +2,7 @@
 
 :root{
 --themecolor: #fcba03;
+--themecolortrans: #fcba037e;
 
 --textcolor: #f1f0eb;
 --textinputecol: #ced0d3;
@@ -57,11 +58,24 @@ input {
     color: var(--textcolor);
     font-family: 'Roboto', Times, serif;
 
-    outline: 2px var(--themecolor);
-    border: 2px solid var(--themecolor);
+    border-color:#06080800;
+    border-bottom: 2px solid var(--themecolortrans);
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+
+    background-color: var(--holdercoltrans);
+}
+
+input:focus {
+    outline: none;
+    border-color:#06080800;
+    border-bottom: 2px solid var(--themecolor);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+
+    transition: 0.5s;
 
     background-color: var(--holdercoltrans);
 }
@@ -70,13 +84,12 @@ button {
     color: var(--textcolor);
     font-family: 'Roboto', Times, serif;
 
-    outline: 2px var(--themecolor);
-    border: 2px solid var(--themecolor);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-
+    border-color: #06080800;
+    border-bottom: 2px solid var(--themecolor);
+    margin: 5px;
     background-color: var(--holdercoltrans);
+    border-radius: 5px;
+    padding: 5px;  
 }
 
 button:hover {
@@ -93,11 +106,16 @@ a {
 
     border-bottom: 2px solid var(--themecolor);
     margin: 5px;
+    background-color: var(--holdercoltrans);
+    border-radius: 5px;
+    padding: 5px;    
 }
 
 a:hover {
     color: var(--themecolor);
     transition: 0.5s;
+    background-color: var(--black);
+
 }
 
 
@@ -121,7 +139,7 @@ header{
 .holder {
     background-color: var(--holdercolor);
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
 }
 
