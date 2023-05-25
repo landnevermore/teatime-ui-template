@@ -25,7 +25,7 @@ background-color: var(--black);
 
 h1{
 color : var(--textcolor);
-font-family: 'Roboto', Times, serif;
+font-family: "Roboto", Times, serif;
 }
 
 h2 {
@@ -187,6 +187,7 @@ header{
 
 .holder {
     background-color: var(--holdercolor);
+    
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
@@ -282,6 +283,30 @@ footer {
     color: var(--textcolor);
     text-align: center;
 
+    border-bottom: 2px solid var(--themecolor);
+    border-radius: 10px;
+
+    background-color: var(--holdercolor);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
+    /* position: fixed; */
+    /* bottom: 0;
+    left: 0;
+    width: 100%; */
+    /* height: 0.9rem; */
+
+}
+
+
+
+.siteheader {
+    background-color: var(--holdercolor);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
     border-top: 2px solid var(--themecolor);
     border-radius: 10px;
 
@@ -296,7 +321,4 @@ footer {
     width: 100%; */
     /* height: 0.9rem; */
 
-    border-top: 2px solid var(--themecolor);
-
 }
-
