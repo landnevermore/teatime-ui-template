@@ -17,6 +17,8 @@
 --green: #01b637;
 --blue: #0055ff;
 
+--corner5px: 5px;
+--corner10px: 10px;
 }
 
 body{
@@ -75,7 +77,7 @@ input:focus {
     outline: none;
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolor);
-    border-radius: 10px;
+    border-radius: var(--corner10px);
     padding: 10px;
     margin: 10px;
 
@@ -102,7 +104,7 @@ textarea:focus {
     outline: none;
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolor);
-    border-radius: 10px;
+    border-radius: var(--corner10px);
     padding: 10px;
     margin: 10px;
 
@@ -119,7 +121,7 @@ button {
     border-bottom: 2px solid var(--themecolor);
     margin: 5px;
     background-color: var(--holdercoltrans);
-    border-radius: 5px;
+    border-radius: var(--corner5px);
     padding: 5px;  
 }
 
@@ -181,7 +183,7 @@ header{
     align-items: center;
     padding: 10px;
     background-color: var(--holdercoltrans);
-    border-radius: 10px;
+    border-radius: 0px;
 
     margin-left: 0px;
 
@@ -204,7 +206,7 @@ header{
 .holder {
     background-color: var(--holdercolor);
     
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 20px;
     margin: 10px;
 }
