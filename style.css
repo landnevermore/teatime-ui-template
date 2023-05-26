@@ -130,6 +130,22 @@ button:hover {
     cursor: pointer;
 }
 
+select {
+    color: var(--textcolor);
+    font-family: 'Roboto', Times, serif;
+
+    border-color: #06080800;
+    border-bottom: 2px solid var(--themecolor);
+    margin: 5px;
+    background-color: var(--holdercoltrans);
+    border-radius: 5px;
+    padding: 5px;  
+}
+
+/* select::backdrop {
+    background-color: var(--holdercoltrans);
+} */
+
 a {
     color: var(--textcolor);
     font-family: 'Roboto', Times, serif;
