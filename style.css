@@ -197,8 +197,8 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
-    margin-block: 2rem;
+    max-width: 3200px;
+    margin-block: 1rem;
     gap: 0rem;
     margin-inline: auto;
 }
@@ -243,6 +243,24 @@ card-h2 {
     padding: 10px;
 }
 
+card-footer{
+    margin-top: auto;
+    font-size: 1.0rem;
+    margin-top: 10px;
+    font-family : 'Roboto', Times, serif;
+    color: var(--textcolor);
+    background-color: var(--holdercoltrans);
+    border-radius: 5px;
+    padding: 10px;
+
+    border: #f1f0eb00;
+    border-bottom: var(--themecolor);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+
+}
+
 /* ---------------------------------------------- */
 
 tag-red {
@@ -272,6 +290,18 @@ tag-green {
 
 tag-blue {
     background-color: var(--blue);
+    color: var(--textcolor);
+    border-radius: 5px;
+    padding: 5px;
+
+    font-family : 'Roboto', Times, serif;
+    font-size: 1.2rem;
+    float: left;
+    margin-right: 10px;
+}
+
+tag-yellow {
+    background-color: var(--themecolor);
     color: var(--textcolor);
     border-radius: 5px;
     padding: 5px;
