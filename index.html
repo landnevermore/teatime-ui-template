@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="teatime.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-    <title>TLib Testing Page</title>
+    <title>TLib | UI Test</title>
 </head>
 <body>
-   
+<div class="content">
+
+    
     <div class="siteheader">
-        <a href="index.html" style="border-color: #f1f0eb00;"> <img class="logo" src="teatime.png" alt="teatimelogo" href="index.html"></a>
         <h1-header>TLib Testing Page</h1-header>
-        <a href="#">GitHub</a>
-        <a href="#">Discord</a>
-        <a href="changelog.html" target="_blank">Changelog</a>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="/changelog.html" target="_blank">Changelog</a></li>
     </div>
+
 
     <div class="holder">
         <header>Information</header>
@@ -47,14 +48,12 @@
         <tag-yellow>Test</tag-yellow>
         Tag Test
     </header>
-
-
-
     </div>
 
     <div class="holder">
         <header>Holder Test</header>
-        <h1>This Text is inside a Holder</h1>
+
+        <div class="holder"></div>
     </div>
 
     <div class="holder">
@@ -73,6 +72,7 @@
     <div class="holder">
         <header>Button Test</header>
         <button>Submit</button>
+        <button>Button 2</button>
     </div>
 
     <div class="holder">
@@ -86,53 +86,51 @@
     </div>
 
     <div class="holder">
-        <header>Card Test</header>
-        <div class="cardholder">
-        <div class="card">
-            <card-h1>Card Title </card-h1>
-            <card-h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo enim vel quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
-            <card-footer>This is a Footer</card-footer>
-        </div>
+        <header>Grid Test</header>
+        <div class="grid">
 
-        <div class="card">
-            <card-h1>Card Title </card-h1>
-            <card-h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo enim vel quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
-            <card-footer>This is a Footer</card-footer>
-        </div>
-        
-        <div class="card">
-            <card-h1>Card Title </card-h1>
-            <card-h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo enim vel quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
-            <card-footer>This is a Footer</card-footer>
-        </div>
-        
-        </div>
-    </div>
-
-
-    <div class="holder">
-        <header><tag-red>W.I.P</tag-red> 
-
-            Contact Form Test</header>
-        <div class="cardholder">
             <div class="card">
-                <card-h1>Contact Form</card-h1>
-                <form action="index.php" method="post">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="text" name="email" placeholder="Email">
-                    <textarea name="Test" id="test" cols="20" rows="3"></textarea>
-                    <button type="submit" name="submit">Submit</button>
-                </form>
+                <card-h1>Card Title </card-h1>
+                <card-h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo enim vel quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
+                <div class="card-footer">
+                    <p>This is a Footer</p>
+                </div>
             </div>
-        </div>
 
+            <div class="card">
+                <card-h1>Card Title </card-h1>
+                <card-h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.endisse commodo enim veldddddddddddd quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
+                <div class="card-footer">
+                    <p>This is a Footer</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <card-h1>Card Title </card-h1>
+                <card-h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo enim vel quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
+                <div class="card-footer">
+                    <button class="card-button">Card Button</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <card-h1>Card Title </card-h1>
+                <card-h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo enim vel quam tempor, id rutrum lacus dictum. Etiam rhoncus at est ut ornare. Integer ornare consequat tincidunt. In hac habitasse platea dictumst. In vel tristique nunc. Donec eget nisl et nulla ultrices posuere eget quis magna.</card-h2>
+                <div class="card-footer">
+                    <p>This is a Footer</p>
+                </div>
+            </div>
+
+        </div>
     </div>
+
 
     <footer>
-        <footer-h1>TEATIME DESIGNS</footer-h1>
+        <footer-h1>Lukas Swirski</footer-h1>
         <footer-h2>© 2023</footer-h2> 
         <a href="#">Impressum</a>
     </footer>
-
+    
+</div>
 </body>
 </html>

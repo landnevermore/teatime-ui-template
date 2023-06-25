@@ -1,3 +1,5 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 :root{
 --themecolor: #fcba03;
@@ -19,45 +21,58 @@
 --blue: #0055ff;
 }
 
+.content{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1900px;
+}
+
+
 body{
-background-color: var(--black);
+background-color: var(--holdercolor);
+
 }
 
 h1-header{
     color : var(--textcolor);
     font-family: "Montserrat";
-    margin-left: 25px;
     font-size: x-large;
 }
 
 h1{
     color : var(--textcolor);
     font-family: "Montserrat";
+    font-size: x-large;
 }
 
 h2 {
     color : var(--textcolor);
     font-family: "Montserrat";
+    font-size: large;
 }
 
 h3 {
     color: var(--textcolor);
     font-family : 'Montserrat', Times, serif;
+    font-size: medium;
 }
 
 h4 {
     color: var(--textcolor);
     font-family : 'Montserrat', Times, serif;
+    font-size: small;
 }
 
 h5 {
     color: var(--textcolor);
     font-family : 'Montserrat', Times, serif;
+    font-size: x-small;
 }
 
 h6 {
     color: var(--textcolor);
     font-family : 'Montserrat', Times, serif;
+    font-size: xx-small;
 }
 
 p {
@@ -71,7 +86,7 @@ input {
 
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolortrans);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 10px;
     margin: 10px;
 
@@ -79,10 +94,21 @@ input {
 }
 
 input:focus {
-    outline: none;
+    outline: rgb(255, 255, 255);
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolor);
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+    transition: 0.5s;
+
+    background-color: var(--holdercoltrans);
+}
+
+input:hover {
+    border-color:#06080800;
+    border-bottom: 2px solid var(--trans);
     padding: 10px;
     margin: 10px;
 
@@ -119,22 +145,61 @@ textarea:focus {
 }
 
 button {
-    color: var(--textcolor);
-    font-family: 'Montserrat', Times, serif;
+    border: none;
+    transition: 0.5s;
 
-    border-color: #06080800;
-    border-bottom: 2px solid var(--themecolor);
-    margin: 5px;
     background-color: var(--holdercoltrans);
     border-radius: 5px;
-    padding: 5px;  
+    padding: 10px;
+    margin: 10px;
+
+
+    font-size: medium;
+    font-family: 'Montserrat';
+    color: var(--textcolor);
 }
 
 button:hover {
-    background-color: var(--themecolor);
-    color: var(--black);
     transition: 0.5s;
     cursor: pointer;
+    background-color: var(--themecolor);
+    color: var(--black);
+
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+
+    font-size: medium;
+    font-family: 'Montserrat';
+}
+
+button:focus {
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: var(--themecolor);
+    color: var(--black);
+
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+
+    font-size: medium;
+    font-family: 'Montserrat';
+}
+
+button:active {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: var(--themecolor);
+    color: var(--black);
+
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+
+    font-size: medium;
+    font-family: 'Montserrat';
 }
 
 select {
@@ -149,11 +214,19 @@ select {
     padding: 5px;  
 }
 
-/* select::backdrop {
+select::backdrop {
     background-color: var(--holdercoltrans);
-} */
+}
+
+li {
+    display: inline;
+    float: right;
+    margin: 5px;
+}
+
 
 a {
+    transition: 0.5s;
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
     text-decoration: none;
@@ -164,15 +237,21 @@ a {
     margin: 5px;
     border-radius: 5px;
     padding: 5px;    
-
 }
 
 a:hover {
-    border-color: var(--themecoltrans);
-    color: var(--themecolor);
-    transition: 0.5s;
+transition: 0.5s;
+cursor: pointer;
+background-color: var(--themecolor);
+color: var(--black);
 
-    background-color: var(--themecolortrans);
+border-radius: 5px;
+padding: 15px;
+margin: 15px;
+
+font-size: medium;
+font-family: 'Montserrat';
+
 
 
 }
@@ -199,14 +278,16 @@ header{
 
     margin-left: 0px;
 
-    font-family: "Montserrat", Times, serif;
+    font-family: "Montserrat";
     font-size: 1.5rem;
     color: var(--textcolor);
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
 .logo{
-    /* float: left;
-    margin: 10px; */
+
     position: absolute;
     left: 25px;
     top: 19px;
@@ -216,156 +297,122 @@ header{
 
 /* ---------------------------------------------- */
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--holdercolor);
+    border-radius: 5px;
+
+}
+
+
 .holder {
     background-color: var(--holdercolor);
     
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-}
-
-.cardholder{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 3200px;
-    margin-block: 1rem;
-    gap: 0rem;
-    margin-inline: auto;
-}
-
-/* .card {
-    margin: 20px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 500px;
-    height: 360px;
-    display: flex;
 
     flex-direction: column;
+    justify-content: center;
+
     border: 2px solid var(--holdercoltrans);
-} */
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    transition: 0.5s;
+
+}
+
 .card{
     margin: 20px;
     background-color: var(--holdercolor);
     border-radius: 5px;
-    padding: 10px;
-    width: 500px;
-    height: 360px;
+    padding: 20px;
+    /* width: 500px; */
     display: flex;
 
     flex-direction: column;
     border: 2px solid var(--holdercoltrans);
+
+    transition: 0.5s;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    font-family: "Montserrat", Times, serif;
+    font-size: 1.5rem;
+    color: var(--textcolor);
+
 }
 
-/* .devcard {
-    margin: 20px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 500px;
-    height: 360px;
-    display: flex;
-
-    flex-direction: column;
-    border: 2px solid var(--holdercoltrans);
-} */
-
-
 card-h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    font-family : "Montserrat";
-    color: var(--textcolor);
-    background-color: var(--holdercoltrans);
-    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     padding: 10px;
+    margin: 10px;
 
-    border: #f1f0eb00;
-    border-bottom: var(--themecolor);
-    border-style: solid;
-    border-width: 2px;
+    border: 2px solid var(--holdercoltrans);
+    background-color: var(--holdercolor);
+
     border-radius: 5px;
 
+    border-bottom: 2px solid var(--themecolor);
 }
 
 card-h2 {
     font-size: 0.9rem;
-    margin-top: 10px;
-    font-family : "Montserrat";
-    color: var(--textcolor);
-    background-color: var(--holdercoltrans);
-    border-radius: 5px;
+
     padding: 10px;
+    margin: 10px;
+
+    border: 2px solid var(--holdercoltrans);
+    background-color: var(--holdercolor);
+
+    border-radius: 5px;
+
 }
 
-card-footer{
+.card-footer {
+
     position: relative;
     bottom: 0;
-    margin-top: auto;
-    font-size: 1.0rem;
 
-    font-family : "Montserrat";
-    color: var(--textcolor);
+    margin-top: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-size: 0.9rem;
     background-color: var(--holdercoltrans);
     border-radius: 5px;
     padding: 10px;
-
-    border: var(--trans);
-    border-bottom: var(--themecolor);
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-
-
-
-
 
 }
 
-/* .card-button{
-    margin-top: auto;
+.card-button{
     font-size: 1.0rem;
-    margin-top: 10px;
     background-color: var(--holdercoltrans);
     border-radius: 5px;
-    padding: 10px;
 
-    border: #f1f0eb00;
-    border-bottom: var(--themecolor);
-    border-top: var(--themecolor);
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
+    position: relative;
+    bottom: 0;
 
+    transition: 0.5s;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
 }
 
 .cardbutton:hover{
     color: var(--black);
     transition: 0.5s;
     cursor: pointer;
-} */
 
-.card-redirect{
-    margin:auto;
-    font-size: 1.0rem;
+    background-color: var(--themecolor);
     border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 2px;
-    margin-top: 10px;
-
-    border-color: #f1f0eb00;
-
-    border-bottom: 2px solid var(--themecolor);
-    border-radius: 5px; 
-    background-color: var(--holdercoltrans);
-    
-}
-
-.card-redirect:hover{
-    transition: 0.5s;
-    cursor: pointer;
-
-    background-color: var(--themecolortrans);
+    padding: 5px;
 }
 
 /* ---------------------------------------------- */
@@ -427,51 +474,36 @@ footer {
     color: var(--textcolor);
     text-align: center;
 
-    border-bottom: 2px solid var(--themecolor);
-    border-radius: 10px;
+    border-radius: 5px;
 
     background-color: var(--holdercolor);
-    border-radius: 10px;
     padding: 20px;
     margin: 10px;
 
-    /* position: fixed; */
-    /* bottom: 0;
-    left: 0;
-    width: 100%; */
-    /* height: 0.9rem; */
-
+    border: 2px solid var(--holdercoltrans);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-bottom: 2px solid var(--themecolor);
 }
 
 
 
 .siteheader {
     background-color: var(--holdercolor);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     margin: 10px;
 
     border-top: 2px solid var(--themecolor);
-    border-radius: 10px;
 
     background-color: var(--holdercolor);
-    border-radius: 10px;
     padding: 20px;
     margin: 10px;
 
-    /* position: fixed; */
-    /* bottom: 0;
-    left: 0;
-    width: 100%; */
-    /* height: 0.9rem; */
-
-}
+    border: 2px solid var(--holdercoltrans);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-top: 2px solid var(--themecolor);
 
 
-img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 /* ---------------------------------------------- */
