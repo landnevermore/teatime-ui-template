@@ -30,7 +30,6 @@
 
 body{
 background-color: var(--holdercolor);
-
 }
 
 h1-header{
@@ -39,40 +38,10 @@ h1-header{
     font-size: x-large;
 }
 
-h1{
+h1,h2,h3,h4,h5,h6{
     color : var(--textcolor);
     font-family: "Montserrat";
-    font-size: x-large;
-}
-
-h2 {
-    color : var(--textcolor);
-    font-family: "Montserrat";
-    font-size: large;
-}
-
-h3 {
-    color: var(--textcolor);
-    font-family : 'Montserrat', Times, serif;
-    font-size: medium;
-}
-
-h4 {
-    color: var(--textcolor);
-    font-family : 'Montserrat', Times, serif;
-    font-size: small;
-}
-
-h5 {
-    color: var(--textcolor);
-    font-family : 'Montserrat', Times, serif;
-    font-size: x-small;
-}
-
-h6 {
-    color: var(--textcolor);
-    font-family : 'Montserrat', Times, serif;
-    font-size: xx-small;
+    font-weight:  350;
 }
 
 p {
@@ -89,12 +58,13 @@ label {
 }
 
 input {
+    transition: 0.5s;
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
 
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolortrans);
-    /* border-radius: 5px; */
+
     padding: 10px;
     margin: 10px;
 
@@ -106,8 +76,9 @@ input:focus {
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolor);
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
+
+    padding: 15px;	
+    margin: 15px;
 
     transition: 0.5s;
 
@@ -117,14 +88,15 @@ input:focus {
 input:hover {
     border-color:#4ee7e700;
     border-bottom: 2px solid var(--white);
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 15px;
 
     transition: 0.5s;
     background-color: var(--holdercoltrans);
 }
 
 textarea {
+    transition: 0.5s;
 
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
@@ -142,8 +114,8 @@ textarea {
 textarea:hover {
     border-color:#4ee7e700;
     border-bottom: 2px solid var(--white);
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 15px;
 
     transition: 0.5s;
     background-color: var(--holdercoltrans);
@@ -154,15 +126,17 @@ textarea:focus {
     border-color:var(--trans);
     border-bottom: 2px solid var(--themecolor);
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
+
+    padding: 15px;
+    margin: 15px;
 
     transition: 0.5s;
 
     background-color: var(--holdercoltrans);
 }
 
-button {
+button, a {
+    text-decoration: none;
     border: none;
     transition: 0.5s;
 
@@ -177,11 +151,9 @@ button {
     color: var(--textcolor);
 }
 
-button:hover {
+a:hover {
     transition: 0.5s;
     cursor: pointer;
-    background-color: var(--themecolor);
-    color: var(--black);
 
     border-radius: 5px;
     padding: 15px;
@@ -189,6 +161,51 @@ button:hover {
 
     font-size: medium;
     font-family: 'Montserrat';
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+a:after {
+    outline: none;
+    border-color: var(--black);
+    color: var(--black);
+    transition: 0.5s;
+}
+
+
+.red{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.green{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.blue{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.yellow{
+    background-color: var(--themecolor);
+    color: var(--black);
+}
+
+button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+
+    font-size: medium;
+    font-family: 'Montserrat';
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
 button:focus {
@@ -220,67 +237,62 @@ button:active {
     font-family: 'Montserrat';
 }
 
-select {
+select{
+    transition: 0.5s;
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
 
-    border-color: #06080800;
-    border-bottom: 2px solid var(--themecolor);
-    margin: 5px;
+    border-color:#06080800;
+    border-bottom: 2px solid var(--themecolortrans);
+
+    padding: 10px;
+    margin: 10px;
+
     background-color: var(--holdercoltrans);
+}
+
+select:hover {
+    border-color:#4ee7e700;
+    border-bottom: 2px solid var(--white);
+    padding: 15px;
+    margin: 15px;
+
+    transition: 0.5s;
+    background-color: var(--holdercoltrans);
+}
+
+select:focus {
+    outline: rgb(255, 255, 255);
+    border-color:#06080800;
+    border-bottom: 2px solid var(--themecolor);
     border-radius: 5px;
-    padding: 5px;  
+
+    padding: 15px;	
+    margin: 15px;
+
+    transition: 0.5s;
+
+    background-color: var(--holdercoltrans);
 }
 
 select::backdrop {
     background-color: var(--holdercoltrans);
+
+
 }
+
+select::selection {
+    background-color: var(--holdercoltrans);
+}
+
+
 
 li {
+    list-style-type: none;
     display: inline;
     float: right;
-    margin: 5px;
+    margin: 1px;
 }
-
-
-a {
-    transition: 0.5s;
-    color: var(--textcolor);
-    font-family: 'Montserrat', Times, serif;
-    text-decoration: none;
-    background-color: var(--holdercoltrans);
-
-
-    border-bottom: 2px solid var(--themecolor);
-    margin: 5px;
-    border-radius: 5px;
-    padding: 5px;    
-}
-
-a:hover {
-transition: 0.5s;
-cursor: pointer;
-background-color: var(--themecolor);
-color: var(--black);
-
-border-radius: 5px;
-padding: 15px;
-margin: 15px;
-
-font-size: medium;
-font-family: 'Montserrat';
-
-
-
-}
-
-a:after {
-    outline: none;
-    border-color: var(--black);
-    color: var(--black);
-    transition: 0.5s;
-}
-
 
 header{
     /* display: flex; */
@@ -304,14 +316,6 @@ header{
 
 }
 
-.logo{
-
-    position: absolute;
-    left: 25px;
-    top: 19px;
-    width: 50px;
-    height: 50px;
-}
 
 /* ---------------------------------------------- */
 
@@ -319,9 +323,8 @@ header{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    padding: 20px;
-    margin: 20px;
-    background-color: var(--holdercolor);
+    padding: 0px;
+    margin: 0px;
     border-radius: 5px;
 
 }
@@ -344,6 +347,7 @@ header{
 
 }
 
+
 .card{
     margin: 20px;
     background-color: var(--holdercolor);
@@ -365,8 +369,8 @@ header{
 
 }
 
+
 card-h1 {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     padding: 10px;
     margin: 10px;
 
@@ -405,33 +409,11 @@ card-h2 {
     border-radius: 5px;
     padding: 10px;
 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+
 }
 
-.card-button{
-    font-size: 1.0rem;
-    background-color: var(--holdercoltrans);
-    border-radius: 5px;
-
-    position: relative;
-    bottom: 0;
-
-    transition: 0.5s;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-}
-
-.cardbutton:hover{
-    color: var(--black);
-    transition: 0.5s;
-    cursor: pointer;
-
-    background-color: var(--themecolor);
-    border-radius: 5px;
-    padding: 5px;
-}
 
 /* ---------------------------------------------- */
 
@@ -522,6 +504,22 @@ footer {
     border-top: 2px solid var(--themecolor);
 
 
+}
+
+@media screen and (max-width: 600px) {
+ li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid var(--holdercoltrans);
+    background-color: var(--holdercolor);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: var(--textcolor);
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+ }
 }
 
 /* ---------------------------------------------- */
