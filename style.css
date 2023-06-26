@@ -80,6 +80,14 @@ p {
     font-family : 'Montserrat', Times, serif;
 }
 
+label {
+    color: var(--textcolor);
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 input {
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
@@ -107,23 +115,23 @@ input:focus {
 }
 
 input:hover {
-    border-color:#06080800;
-    border-bottom: 2px solid var(--trans);
+    border-color:#4ee7e700;
+    border-bottom: 2px solid var(--white);
     padding: 10px;
     margin: 10px;
 
     transition: 0.5s;
-
     background-color: var(--holdercoltrans);
 }
 
 textarea {
+
     color: var(--textcolor);
     font-family: 'Montserrat', Times, serif;
 
     border-color:#06080800;
     border-bottom: 2px solid var(--themecolortrans);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 10px;
     margin: 10px;
 
@@ -131,11 +139,21 @@ textarea {
     resize: none;
 }
 
+textarea:hover {
+    border-color:#4ee7e700;
+    border-bottom: 2px solid var(--white);
+    padding: 10px;
+    margin: 10px;
+
+    transition: 0.5s;
+    background-color: var(--holdercoltrans);
+}
+
 textarea:focus {
     outline: none;
     border-color:var(--trans);
     border-bottom: 2px solid var(--themecolor);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     margin: 10px;
 
