@@ -174,23 +174,23 @@ a:after {
 
 
 .red{
-    background-color: var(--red);
+    border: 2px solid var(--red);
     color: var(--white);
 }
 
 .green{
-    background-color: var(--green);
+    border: 2px solid var(--green);
     color: var(--white);
 }
 
 .blue{
-    background-color: var(--blue);
+    border: 2px solid var(--blue);
     color: var(--white);
 }
 
 .yellow{
-    background-color: var(--themecolor);
-    color: var(--black);
+    border: 2px solid var(--themecolor);
+    color: var(--white);
 }
 
 button:hover {
