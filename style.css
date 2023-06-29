@@ -2,7 +2,7 @@
 
 
 :root{
---themecolor: #fcba03;
+ --themecolor: #fcba03;
 --themecolortrans: #fcba037e;
 
 --trans: #ffffff00;
@@ -19,7 +19,19 @@
 --red: #ac0d0d;
 --green: #01b637;
 --blue: #0055ff;
+
+--shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
+body {
+	background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%,
+  rgba(0,0,0,0.8) 60%, 
+  rgb(114, 59, 59) 90%), 
+  url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/stars.jpg);
+	background-size: cover;
+	color: white;
+}
+
 
 .content{
     margin: 0 auto;
@@ -28,9 +40,6 @@
 }
 
 
-body{
-background-color: var(--holdercolor);
-}
 
 h1-header{
     color : var(--textcolor);
@@ -59,35 +68,35 @@ label {
 
 input {
     transition: 0.5s;
-    color: var(--textcolor);
-    font-family: 'Montserrat', Times, serif;
 
+    color: var(--textcolor);
+    font-family: 'Montserrat';
     border-color:#06080800;
-    border-bottom: 2px solid var(--themecolortrans);
+    border-radius: 5px;
 
     padding: 10px;
     margin: 10px;
 
     background-color: var(--holdercoltrans);
+
 }
 
 input:focus {
-    outline: rgb(255, 255, 255);
-    border-color:#06080800;
-    border-bottom: 2px solid var(--themecolor);
+
+    outline: none;
+    border-color: var(--themecolor);
     border-radius: 5px;
 
-    padding: 15px;	
+    padding: 15px;
     margin: 15px;
 
     transition: 0.5s;
-
     background-color: var(--holdercoltrans);
+
 }
 
 input:hover {
-    border-color:#4ee7e700;
-    border-bottom: 2px solid var(--white);
+    border-color: var(--themecolor);
     padding: 15px;
     margin: 15px;
 
@@ -302,7 +311,7 @@ header{
     padding: 10px;
     background-color: var(--holdercoltrans);
     border-radius: 5px;
-    border-bottom: 2px solid #fcba03;
+    border-bottom: 2px solid var(--themecolor);
     
 
 
@@ -507,18 +516,8 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
- li {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid var(--holdercoltrans);
-    background-color: var(--holdercolor);
-    border-radius: 5px;
-    font-size: 1.5rem;
-    color: var(--textcolor);
-    transition: 0.5s;
-    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+ .content {
+
  }
 }
 
