@@ -20,16 +20,13 @@
 --green: #01b637;
 --blue: #0055ff;
 
+--font: 'Montserrat';
+
 --shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 body {
-	background: radial-gradient(ellipse at center, rgba(127,0,173,0.6) 0%,
-  rgba(0,0,0,0.8) 60%, 
-  rgb(114, 59, 59) 90%), 
-  url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/stars.jpg);
-	background-size: cover;
-	color: white;
+    background-color: var(--holdercolor);
 }
 
 
@@ -56,6 +53,11 @@ h1,h2,h3,h4,h5,h6{
 p {
     color: var(--textcolor);
     font-family : 'Montserrat', Times, serif;
+}
+
+hr{
+    border: 1px solid var(--themecolor);
+    margin: 10px;
 }
 
 label {
@@ -144,7 +146,7 @@ textarea:focus {
     background-color: var(--holdercoltrans);
 }
 
-button, a {
+button {
     text-decoration: none;
     border: none;
     transition: 0.5s;
@@ -159,28 +161,6 @@ button, a {
     font-family: 'Montserrat';
     color: var(--textcolor);
 }
-
-a:hover {
-    transition: 0.5s;
-    cursor: pointer;
-
-    border-radius: 5px;
-    padding: 15px;
-    margin: 15px;
-
-    font-size: medium;
-    font-family: 'Montserrat';
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-a:after {
-    outline: none;
-    border-color: var(--black);
-    color: var(--black);
-    transition: 0.5s;
-}
-
 
 .red{
     border: 2px solid var(--red);
@@ -292,15 +272,6 @@ select::backdrop {
 
 select::selection {
     background-color: var(--holdercoltrans);
-}
-
-
-
-li {
-    list-style-type: none;
-    display: inline;
-    float: right;
-    margin: 1px;
 }
 
 header{
@@ -494,26 +465,40 @@ footer {
     border-bottom: 2px solid var(--themecolor);
 }
 
-
-
-.siteheader {
-    background-color: var(--holdercolor);
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-
-    border-top: 2px solid var(--themecolor);
-
-    background-color: var(--holdercolor);
-    padding: 20px;
-    margin: 10px;
-
-    border: 2px solid var(--holdercoltrans);
-    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    border-top: 2px solid var(--themecolor);
-
-
+nav {
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ff0000 25%, #ff0000 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 60px 0;
 }
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 5px var(--themecolor);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: var(--font);
+  text-transform:uppercase;
+  color: var(--themecolor);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--themecolor);
+}
+
+/* ---------------------------------------------- */
 
 @media screen and (max-width: 600px) {
  .content {
