@@ -2,7 +2,7 @@
 
 
 :root{
- --themecolor: #fcba03;
+--themecolor: #fcba03;
 --themecolortrans: #fcba037e;
 
 --trans: #ffffff00;
@@ -10,8 +10,8 @@
 --textcolor: #f1f0eb;
 --textinputecol: #ced0d3;
 
---holdercolor: #1a1a1a;
---holdercoltrans: #333333;
+--background: #1a1a1a;
+--outline: #333333;
 
 --white: #f1f0eb;
 --black: #060808;
@@ -26,17 +26,8 @@
 }
 
 body {
-    background-color: var(--holdercolor);
+    background-color: var(--background);
 }
-
-
-.content{
-    margin: 0 auto;
-    width: 80%;
-    max-width: 1900px;
-}
-
-
 
 h1-header{
     color : var(--textcolor);
@@ -46,13 +37,13 @@ h1-header{
 
 h1,h2,h3,h4,h5,h6{
     color : var(--textcolor);
-    font-family: "Montserrat";
+    font-family: var(--font);
     font-weight:  350;
 }
 
 p {
     color: var(--textcolor);
-    font-family : 'Montserrat', Times, serif;
+    font-family: var(--font);
 }
 
 hr{
@@ -62,238 +53,93 @@ hr{
 
 label {
     color: var(--textcolor);
-    font-family: 'Montserrat', Times, serif;
+    font-family: var(--font);
     font-size: medium;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
 input {
-    transition: 0.5s;
 
-    color: var(--textcolor);
-    font-family: 'Montserrat';
-    border-color:#06080800;
+    background-color: var(--background);
+    border: 2px solid var(--outline);
     border-radius: 5px;
+    color: var(--textcolor);
+
+    font-family: var(--font);
+    font-size: medium;
 
     padding: 10px;
     margin: 10px;
 
-    background-color: var(--holdercoltrans);
-
-}
-
-input:focus {
-
-    outline: none;
-    border-color: var(--themecolor);
-    border-radius: 5px;
-
-    padding: 15px;
-    margin: 15px;
-
-    transition: 0.5s;
-    background-color: var(--holdercoltrans);
-
-}
-
-input:hover {
-    border-color: var(--themecolor);
-    padding: 15px;
-    margin: 15px;
-
-    transition: 0.5s;
-    background-color: var(--holdercoltrans);
-}
-
-textarea {
-    transition: 0.5s;
-
-    color: var(--textcolor);
-    font-family: 'Montserrat', Times, serif;
-
-    border-color:#06080800;
-    border-bottom: 2px solid var(--themecolortrans);
-    /* border-radius: 5px; */
-    padding: 10px;
-    margin: 10px;
-
-    background-color: var(--holdercoltrans);
-    resize: none;
-}
-
-textarea:hover {
-    border-color:#4ee7e700;
-    border-bottom: 2px solid var(--white);
-    padding: 15px;
-    margin: 15px;
-
-    transition: 0.5s;
-    background-color: var(--holdercoltrans);
-}
-
-textarea:focus {
-    outline: none;
-    border-color:var(--trans);
-    border-bottom: 2px solid var(--themecolor);
-    border-radius: 5px;
-
-    padding: 15px;
-    margin: 15px;
-
-    transition: 0.5s;
-
-    background-color: var(--holdercoltrans);
+    border-bottom: 5px solid var(--themecolor);
 }
 
 button {
-    text-decoration: none;
-    border: none;
-    transition: 0.5s;
-
-    background-color: var(--holdercoltrans);
+    background-color: var(--outline);
+    border: 2px solid var(--outline);
     border-radius: 5px;
+
+    color: var(--textcolor);
+    font-family: var(--font);
+    font-size: medium;
+
     padding: 10px;
     margin: 10px;
 
+    box-shadow: 0 5px #666;
 
-    font-size: medium;
-    font-family: 'Montserrat';
-    color: var(--textcolor);
-}
-
-.red{
-    border: 2px solid var(--red);
-    color: var(--white);
-}
-
-.green{
-    border: 2px solid var(--green);
-    color: var(--white);
-}
-
-.blue{
-    border: 2px solid var(--blue);
-    color: var(--white);
-}
-
-.yellow{
-    border: 2px solid var(--themecolor);
-    color: var(--white);
-}
-
-button:hover {
-    transition: 0.5s;
-    cursor: pointer;
-
-    border-radius: 5px;
-    padding: 15px;
-    margin: 15px;
-
-    font-size: medium;
-    font-family: 'Montserrat';
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
-}
-
-button:focus {
-    outline: none;
-    transition: 0.5s;
-    cursor: pointer;
-    background-color: var(--themecolor);
-    color: var(--black);
-
-    border-radius: 5px;
-    padding: 15px;
-    margin: 15px;
-
-    font-size: medium;
-    font-family: 'Montserrat';
 }
 
 button:active {
-    transition: 0.5s;
-    cursor: pointer;
-    background-color: var(--themecolor);
-    color: var(--black);
-
+    background-color: var(--outline);
+    border: 2px solid var(--outline);
     border-radius: 5px;
-    padding: 15px;
-    margin: 15px;
 
-    font-size: medium;
-    font-family: 'Montserrat';
-}
-
-select{
-    transition: 0.5s;
     color: var(--textcolor);
-    font-family: 'Montserrat', Times, serif;
-
-    border-color:#06080800;
-    border-bottom: 2px solid var(--themecolortrans);
+    font-family: var(--font);
+    font-size: medium;
 
     padding: 10px;
     margin: 10px;
 
-    background-color: var(--holdercoltrans);
+    box-shadow: 0 5px #66666600;
+    transform: translateY(4px);
+
 }
 
-select:hover {
-    border-color:#4ee7e700;
-    border-bottom: 2px solid var(--white);
-    padding: 15px;
-    margin: 15px;
-
-    transition: 0.5s;
-    background-color: var(--holdercoltrans);
-}
-
-select:focus {
-    outline: rgb(255, 255, 255);
-    border-color:#06080800;
-    border-bottom: 2px solid var(--themecolor);
+button:hover{
+    border: 2px solid var(--themecolor);
     border-radius: 5px;
 
-    padding: 15px;	
-    margin: 15px;
+    color: var(--textcolor);
+    font-family: var(--font);
+    font-size: medium;
 
-    transition: 0.5s;
-
-    background-color: var(--holdercoltrans);
+    padding: 10px;
+    margin: 10px;
 }
 
-select::backdrop {
-    background-color: var(--holdercoltrans);
-
-
-}
-
-select::selection {
-    background-color: var(--holdercoltrans);
+a{
+    color: var(--themecolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
 }
 
 header{
-    /* display: flex; */
-    /* flex-direction: row; */
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--holdercoltrans);
+    color: var(--textcolor);
+    font-family: var(--font);
+    font-size: 1.5rem;
+    text-align: left;
+
+    background-color: var(--outline);
     border-radius: 5px;
     border-bottom: 2px solid var(--themecolor);
-    
 
-
-    margin-left: 0px;
-
-    font-family: "Montserrat";
-    font-size: 1.5rem;
-    color: var(--textcolor);
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
 }
 
 
@@ -311,7 +157,7 @@ header{
 
 
 .holder {
-    background-color: var(--holdercolor);
+    background-color: var(--background);
     
     border-radius: 5px;
     padding: 20px;
@@ -320,7 +166,7 @@ header{
     flex-direction: column;
     justify-content: center;
 
-    border: 2px solid var(--holdercoltrans);
+    border: 2px solid var(--outline);
     box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
     transition: 0.5s;
@@ -330,14 +176,14 @@ header{
 
 .card{
     margin: 20px;
-    background-color: var(--holdercolor);
+    background-color: var(--background);
     border-radius: 5px;
     padding: 20px;
     /* width: 500px; */
     display: flex;
 
     flex-direction: column;
-    border: 2px solid var(--holdercoltrans);
+    border: 2px solid var(--outline);
 
     transition: 0.5s;
 
@@ -354,8 +200,8 @@ card-h1 {
     padding: 10px;
     margin: 10px;
 
-    border: 2px solid var(--holdercoltrans);
-    background-color: var(--holdercolor);
+    border: 2px solid var(--outline);
+    background-color: var(--background);
 
     border-radius: 5px;
 
@@ -368,8 +214,8 @@ card-h2 {
     padding: 10px;
     margin: 10px;
 
-    border: 2px solid var(--holdercoltrans);
-    background-color: var(--holdercolor);
+    border: 2px solid var(--outline);
+    background-color: var(--background);
 
     border-radius: 5px;
 
@@ -385,7 +231,7 @@ card-h2 {
     margin-right: 10px;
 
     font-size: 0.9rem;
-    background-color: var(--holdercoltrans);
+    background-color: var(--outline);
     border-radius: 5px;
     padding: 10px;
 
@@ -446,6 +292,26 @@ tag-yellow {
     margin-right: 10px;
 }
 
+.outline-red {
+    border: 2px solid var(--red);
+    color: var(--white);
+}
+
+.outline-green {
+    border: 2px solid var(--green);
+    color: var(--white);
+}
+
+.outline-blue {
+    border: 2px solid var(--blue);
+    color: var(--white);
+}
+
+.outline-theme {
+    border: 2px solid var(--themecolor);
+    color: var(--white);
+}
+
 /* ---------------------------------------------- */
 footer {
 
@@ -456,11 +322,11 @@ footer {
 
     border-radius: 5px;
 
-    background-color: var(--holdercolor);
+    background-color: var(--background);
     padding: 20px;
     margin: 10px;
 
-    border: 2px solid var(--holdercoltrans);
+    border: 2px solid var(--outline);
     box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     border-bottom: 2px solid var(--themecolor);
 }
@@ -493,21 +359,65 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px var(--themecolor);
   background: rgba(255, 255, 255, 0.1);
   color: var(--themecolor);
 }
 
+
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+border: 2px solid var(--outline);
+box-shadow: rgba(0, 0, 0, 0.486) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--textcolor);
+    display: block;
+
+    background-color: var(--outline);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sidenav a:hover {
+    background-color: var(--themecolortrans);
+    color: var(--textcolor);
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0 10px;
+}
+
+
+
+
+
 /* ---------------------------------------------- */
 
-@media screen and (max-width: 600px) {
- .content {
-
- }
+@media screen and (max-width: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 /* ---------------------------------------------- */
 /* CUSTOM CSS UNDER THIS LINE */
 /* ---------------------------------------------- */
-
-
