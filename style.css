@@ -201,69 +201,91 @@ header{
 
 
 .card{
-    margin: 20px;
+
     background-color: var(--background);
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 10px;
 
-    flex-direction: column;
     border: 2px solid var(--outline);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-    transition: 0.5s;
+    transition: 0.5s;	
 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
 
-    font-family: "Montserrat", Times, serif;
+.card > h1 {
     font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--background);
     color: var(--textcolor);
+    text-align: center;
+    border: 2px solid var(--themecolor);
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-
-card-h1 {
-    padding: 10px;
-    margin: 10px;
-
-    border: 2px solid var(--outline);
-    background-color: var(--background);
-
-    border-radius: 5px;
-
-    border-bottom: 2px solid var(--themecolor);
-}
-
-card-h2 {
+.card > h2 {
     font-size: 0.9rem;
-
-    padding: 10px;
     margin: 10px;
-
-    border: 2px solid var(--outline);
-    background-color: var(--background);
-
+    padding: 10px;
     border-radius: 5px;
+    background-color: var(--background);
+    color: var(--textcolor);
+    text-align: center;
+    border: 1px solid var(--themecolor);
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
 
 }
 
-.card-footer {
+.card > .footer {
+    font-size: 0.9rem;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--background);
+    color: var(--textcolor);
+    text-align: center;
+    border: 1px solid var(--themecolor);
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
 
-    position: relative;
-    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 
-    margin-top: auto;
+.card > .footer > a {
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
+
+    padding: 10px;
     margin-left: 10px;
-    margin-right: 10px;
 
-    font-size: 0.9rem;
-    background-color: var(--outline);
-    border-radius: 5px;
-    padding: 10px;
+    border: 2px solid var(--outline);
+    border-radius: 15px;
 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
-
+    box-shadow: var(--themecolor) 0px 3px 0px 0px inset;
 }
+
+/* .card-footer {
+    font-family: "Montserrat", Times, serif;
+    font-size: 0.9rem;
+    color: var(--textcolor);
+    text-align: center;
+
+    border-radius: 5px;
+
+    background-color: var(--background);
+    padding: 20px;
+    margin: 10px;
+
+} */
 
 
 /* ---------------------------------------------- */
@@ -367,6 +389,41 @@ footer {
     border-bottom: 2px solid var(--themecolor);
 }
 
+footer > a {
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
+
+    padding: 10px;
+    margin-left: 10px;
+
+    border: 2px solid var(--outline);
+    border-radius: 15px;
+
+    box-shadow: var(--themecolor) 0px 3px 0px 0px inset;
+}
+
+footer > a:hover {
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
+
+    padding: 10px;
+    margin-left: 10px;
+
+    border: 2px solid var(--themecolor);
+    border-radius: 15px;
+
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
+    transition: 0.5s;
+}
+
+/* ---------------------------------------------- */
+
 .nav{
     background-color: var(--background);
     border-radius: 5px;
@@ -421,29 +478,28 @@ footer {
     transition: 0.5s;
 }
 
-.nav-disabled{
-    color: var(--textcolor);
-    text-decoration: none;
-    font-family: 'Montserrat', Times, serif;
-    font-size: medium;
-    text-align: center;
-
-    padding: 10px;
-    margin-left: 10px;
-
-    border: 2px solid var(--outline);
-    border-radius: 15px;
-
-    box-shadow: var(--themecolor) 0px 3px 0px 0px inset;
-}
-
 /* ---------------------------------------------- */
 
 @media screen and (max-width: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+    .holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
+
 
 /* ---------------------------------------------- */
 /* CUSTOM CSS UNDER THIS LINE */
+/* ---------------------------------------------- */
+
+
+
+
+
+
+
+
 /* ---------------------------------------------- */
