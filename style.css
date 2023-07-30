@@ -27,6 +27,7 @@
 
 body {
     background-color: var(--background);
+    accent-color: var(--themecolor);
 }
 
 h1-header{
@@ -60,10 +61,9 @@ label {
 }
 
 input {
-
     background-color: var(--background);
     border: 2px solid var(--outline);
-    border-radius: 5px;
+    border-radius: 15px;
     color: var(--textcolor);
 
     font-family: var(--font);
@@ -72,52 +72,78 @@ input {
     padding: 10px;
     margin: 10px;
 
-    border-bottom: 5px solid var(--themecolor);
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
+
+    transition: 0.5s;
+}
+
+input:focus {
+    outline: none;
+    background-color: var(--background);
+    border: 2px solid var(--themecolortrans);
+    border-radius: 15px;
+    color: var(--textcolor);
+
+    font-family: var(--font);
+    font-size: medium;
+
+    padding: 10px;
+    margin: 10px;
+
+    border-bottom: 3px solid var(--themecolor);
+    transition: 0.5s;
 }
 
 button {
-    background-color: var(--outline);
-    border: 2px solid var(--outline);
-    border-radius: 5px;
+    background-color: var(--background);
 
+
+    border: 2px solid var(--outline);
+    border-radius: 15px;
     color: var(--textcolor);
+    
     font-family: var(--font);
     font-size: medium;
 
     padding: 10px;
+
     margin: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 
-    box-shadow: 0 5px #666;
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
 
+    transition: 0.5s;
 }
 
-button:active {
-    background-color: var(--outline);
-    border: 2px solid var(--outline);
-    border-radius: 5px;
+button:hover {
+    background-color: var(--background);
 
-    color: var(--textcolor);
-    font-family: var(--font);
-    font-size: medium;
-
-    padding: 10px;
-    margin: 10px;
-
-    box-shadow: 0 5px #66666600;
-    transform: translateY(4px);
-
-}
-
-button:hover{
     border: 2px solid var(--themecolor);
-    border-radius: 5px;
-
+    border-radius: 15px;
     color: var(--textcolor);
+    
     font-family: var(--font);
     font-size: medium;
 
-    padding: 10px;
+    padding: 15px;
+
     margin: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
+
+    transition: 0.5s;
+}
+
+button > a {
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 a{
@@ -179,7 +205,6 @@ header{
     background-color: var(--background);
     border-radius: 5px;
     padding: 20px;
-    /* width: 500px; */
     display: flex;
 
     flex-direction: column;
@@ -244,52 +269,63 @@ card-h2 {
 /* ---------------------------------------------- */
 
 tag-red {
-    background-color: var(--red);
+    background-color: var(--background);
     color: var(--textcolor);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     font-family : "Montserrat";
     font-size: 1.2rem;
 
-    float: left;
-    margin-right: 10px;
+    border: 2px solid var(--red);
+    box-shadow: var(--red) 0px 3px 4px 0px inset;
 }
 
 tag-green {
-    background-color: var(--green);
+    background-color: var(--background);
     color: var(--textcolor);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     font-family : "Montserrat";
     font-size: 1.2rem;
-    float: left;
-    margin-right: 10px;
+    
+    border: 2px solid var(--green);
+    box-shadow: var(--green) 0px 3px 4px 0px inset;
 }
 
 tag-blue {
-    background-color: var(--blue);
+    background-color: var(--background);	
     color: var(--textcolor);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     font-family : 'Montserrat', Times, serif;
     font-size: 1.2rem;
-    float: left;
-    margin-right: 10px;
+
+    border: 2px solid var(--blue);
+    box-shadow: var(--blue) 0px 3px 4px 0px inset;
 }
 
 tag-yellow {
-    background-color: var(--themecolortrans);
+    background-color: var(--background);
     color: var(--textcolor);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     font-family : 'Montserrat', Times, serif;
     font-size: 1.2rem;
-    float: left;
-    margin-right: 10px;
+
+    border: 2px solid var(--themecolor);
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
 }
 
 .outline-red {
@@ -331,85 +367,75 @@ footer {
     border-bottom: 2px solid var(--themecolor);
 }
 
-nav {
-  max-width: 960px;
-  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ff0000 25%, #ff0000 75%, rgba(255, 255, 255, 0) 100%);
-  margin: 0 auto;
-  padding: 60px 0;
-}
-
-nav ul {
-  text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 5px var(--themecolor);
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  padding: 18px;
-  font-family: var(--font);
-  text-transform:uppercase;
-  color: var(--themecolor);
-  font-size: 18px;
-  text-decoration: none;
-  display: block;
-}
-
-nav ul li a:hover {
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px var(--themecolor);
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--themecolor);
-}
-
-
-
-.sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-
-border: 2px solid var(--outline);
-box-shadow: rgba(0, 0, 0, 0.486) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: var(--textcolor);
-    display: block;
-
-    background-color: var(--outline);
+.nav{
+    background-color: var(--background);
     border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 20px;
+    margin: 10px;
 
-    margin-left: 10px;
-    margin-right: 10px;
+    border: 2px solid var(--outline);
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-top: 2px solid var(--themecolor);
 }
 
-.sidenav a:hover {
-    background-color: var(--themecolortrans);
+.nav > h1 {
+    float: left;
+    font-family: 'Montserrat', Times, serif;
+    font-size: 1.5rem;
     color: var(--textcolor);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
 
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0 10px;
+.nav > a{
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
+
+    padding: 10px;
+    margin-left: 10px;
+
+    border: 2px solid var(--outline);
+    border-radius: 15px;
+
+    box-shadow: var(--themecolor) 0px 3px 0px 0px inset;
 }
 
+.nav > a:hover{
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
 
+    padding: 10px;
+    margin-left: 10px;
 
+    border: 2px solid var(--themecolor);
+    border-radius: 15px;
 
+    box-shadow: var(--themecolor) 0px 3px 4px 0px inset;
+    transition: 0.5s;
+}
+
+.nav-disabled{
+    color: var(--textcolor);
+    text-decoration: none;
+    font-family: 'Montserrat', Times, serif;
+    font-size: medium;
+    text-align: center;
+
+    padding: 10px;
+    margin-left: 10px;
+
+    border: 2px solid var(--outline);
+    border-radius: 15px;
+
+    box-shadow: var(--themecolor) 0px 3px 0px 0px inset;
+}
 
 /* ---------------------------------------------- */
 
